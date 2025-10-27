@@ -75,13 +75,16 @@ img{
 .navbar{
     background: var(--light-color);
     padding: 20px;
+    
 }
+
 
 .navbar .container{
     display: flex;
     justify-content: space-between;
     justify-content: center;
     align-items: center;
+    
 }
 
 .navbar .main-menu ul{
@@ -92,9 +95,11 @@ img{
 .navbar ul li a{
     padding: 10px 20px;
     display: block;
-    font-weight: 700;
+    font-weight:600;
     /* fade into color */
     transition: 0.5s;
+    font-size: 20px;
+    
 }
 
 .navbar ul li a:hover {
@@ -105,10 +110,10 @@ img{
 
 /* Header */
 .hero{
-    background: image();
     color: var(--dark-color);
     text-align: center;
     padding: 100px 20px;
+    
 }
 
 .hero-content {
@@ -116,12 +121,19 @@ img{
     align-items: center;
     justify-content: center;
     gap: 40px;
+   
 }
 
 .hero-text .name-text {
     position: relative;
     display: inline-block;
     line-height: 1.1;
+}
+
+.hero-text .intro {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
 }
 
 .name {
@@ -148,8 +160,8 @@ img{
 }
 
 .hero-img {
-    width: 190px;
-    height: 180px;
+    width: 380px;
+    height: 360px;
     object-fit: cover; /* fit whole circle */
     border-radius: 50%; /*circle*/
     border: 4px solid var(--light-pink);
@@ -177,6 +189,14 @@ h2 {
 }
 
 /* Projects */
+.container-project-card {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1100px;
+
+}
+
+
 .project-grid {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -189,6 +209,15 @@ h2 {
     padding: 20px;
     text-align: center;
     box-shadow: 0 6px 8px var(--med-pink);
+}
+
+.project-card:hover{
+        background: #e7b3c4;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 6px 8px #c37994;
+        transform: scale(1.02);
 }
 
 .project-card h3 {
