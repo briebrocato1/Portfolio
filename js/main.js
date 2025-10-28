@@ -2,7 +2,7 @@
     const body = document.body; //toggle class on body
     const gate = document.getElementById('letter-content');
     const letter = gate ? gate.querySelector('.letter-wrapper') : null;  //clickable letter container
-    const SKIP_KEY = 'letterOpened';  //tracks if it has been opened
+    // const SKIP_KEY = 'letterOpened';  //tracks if it has been opened
 
 
     // hides gate and reveals site
@@ -12,10 +12,8 @@
         gate.classList.add('closing');  //css class
 
         setTimeout(() => {
-            body.classList.remove('gate');  //site content will be visible
-            gate.remove(); //remove from DOM
-            try {localStorage.setItem(SKIP_KEY, '1');}
-            catch (e) {}                                    // Catch any errors (like if localStorage is disabled)
+            body.classList.remove('gate-active');  //site content will be visible
+            gate.remove(); //remove from DOM                                   // Catch any errors (like if localStorage is disabled)
             }, 700);   //wait 0.7s(fade time)  
         }
 
@@ -36,15 +34,7 @@
     // runs when page loads
     function init() 
         {
-        try {
-            if (localStorage.getItem(SKIP_KEY) === '1')
-                {
-                if (gate) 
-                    gate.remove();
-                body.classList.remove('gate-active');
-                return;
-                }
-            } catch (e) {}
+        body.classList.add('gate-active');
 
         attatchHandlers();
         } 
