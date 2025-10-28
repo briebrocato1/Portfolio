@@ -3,6 +3,7 @@
     const gate = document.getElementById('letter-content');
     const letter = gate ? gate.querySelector('.letter-wrapper') : null;  //clickable letter container
     // const SKIP_KEY = 'letterOpened';  //tracks if it has been opened
+    
 
     
 

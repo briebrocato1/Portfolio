@@ -8,14 +8,13 @@ body{
     font-family: 'Quicksand';
     font-size: 16px;
     line-height: 1.5;
-    background: var(--light-color);
-    height: 100vh;
-    width: 100%;
+    background: var(--bg);
+    color: var(--text);
 }
 
 a{
     text-decoration: none;
-    color: var(--dark-color);
+    color: var(--primary);
 }
 
 ul{
@@ -42,26 +41,66 @@ img{
 }
 
 :root {
-    --blue-color: #5d7ed1;
+    --blue-color: #53669f;
+    --green-color: #aaa33f;
     --light-color: #f2eadf;
     --dark-color: #363f53;
-    --light-pink: #efc3d2;
-    --med-pink: #df95b0;
+    --light-pink: #e17171;
+    --med-pink: #da484a;
+    --orange-color: #e7a33d;
+
+
+    --bg: var(--light-color);
+    --text: var(--dark-color);
+    --primary: var(--blue-color);
+    /* links or primary buttons */
+    --accent: var(--med-pink);
+    /* highlights */
+    --accent-2: var(--light-pink);
+    /* soft pink accents */
+    --success: var(--green-color);
+    --warning: var(--orange-color);
+
+    /* shades */
+    --primary-600: #465a90;
+    --primary-700: #3b4e7b;
+    --accent-600: #c43f41;
+    --accent-700: #a73739;
+
+    --surface: #fff8ee;
+    --surface-2: #fff3e1;
+    /* warmer */
+    --ring: rgba(83, 102, 159, .35);
+    --shadow: 0 10px 28px rgba(54, 63, 83, .14);   
 
 }
 
 
 /* Letter Gate */
+
+.letter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 #letter-content {
     position: fixed;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--light-color);
+    background-color: var(--surface-2);
     z-index: 9999;
     transition: opacity 0.6s ease, transform 0.6s ease;
+    box-shadow: var(--shadow);
     
+}
+
+.got-mail {
+    margin-bottom: 10rem;
 }
 
 body.gate-active #letter-content {
@@ -87,10 +126,15 @@ body.gate-active #site-content {
     transform: scale(0.98);
 }
 
+#mail-banner {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 .letter-wrapper {
     height: 400px;
     width: 600px;
-    background-color: #c37994;
+    background-color: var(--green-color);
     position: relative;
     display: flex;
     justify-content: center;
@@ -103,7 +147,7 @@ body.gate-active #site-content {
     top: 0;
     width: 80%;
     height: 80%;
-    background-color: #e8dbc9;
+    background-color: #fff;
     border-radius: 40px;
     z-index: 2;
     transition: 0.5s;
@@ -123,9 +167,9 @@ body.gate-active #site-content {
     top: 0;
     left: 0;
     border-top: 200px solid transparent;
-    border-right: 300px solid #f0c4d2;
-    border-bottom: 200px solid #f0c4d2;
-    border-left: 300px solid #f2a4c8;
+    border-right: 300px solid var(--blue-color);
+    border-bottom: 200px solid var(--blue-color);
+    border-left: 300px solid var(--dark-color);
     z-index: 3;
 
 }
@@ -144,7 +188,7 @@ body.gate-active #site-content {
 }
  
 .part.one {
-   border-top: 200px solid #ed658b; 
+   border-top: 200px solid var(--light-pink); 
    transform: rotateX(0deg);
    z-index: 3;
    /* envelope opens */
@@ -152,7 +196,7 @@ body.gate-active #site-content {
 }
 
 .part.two {
-    border-top: 200px solid #64704d;
+    border-top: 200px solid var(--blue-color);
     transform: rotateX(90deg);
     z-index: 1;
     transition-delay: 0.5s;
@@ -177,22 +221,25 @@ body.gate-active #site-content {
 
 
 
+
+
 /* Buttons */
 
 .btn{
     display: inline-block;
     padding: 13px 20px;
-    background: var(--light-color);
-    color: #333;
+    background: var(--primary);
+    color: white;
     font-weight: 700;
     text-decoration: none;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.5s;
+    /* box-shadow: var(--shadow); */
 }
 
 .btn:hover{
-    opacity: 0.8;
+    background: var(--primary-600);
 }
 
 .btn-block{
@@ -240,7 +287,7 @@ body.gate-active #site-content {
 
 .name-shadow {
     color: var(--light-pink);
-    transform: translate(6px, 6px);
+    transform: translate(4px, 4px);
     z-index: 0;
     opacity: 0.8;
    
@@ -297,11 +344,11 @@ h2 {
 }
 
 .project-card {
-    background: var(--light-pink);
+    background: var(--surface);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 6px 8px var(--med-pink);
+    box-shadow: 0 6px 8px var(--shadow);
 }
 
 .project-card:hover{
