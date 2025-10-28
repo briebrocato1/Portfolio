@@ -4,6 +4,7 @@
     const letter = gate ? gate.querySelector('.letter-wrapper') : null;  //clickable letter container
     // const SKIP_KEY = 'letterOpened';  //tracks if it has been opened
 
+    
 
     // hides gate and reveals site
     function closeGate() {
