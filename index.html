@@ -17,15 +17,24 @@
 
 <div id="letter-content">
 <div class="letter-container">
-<h2 class="got-mail">You've got mail!</h2>
- <div class="letter-wrapper">
-    <div class="part one"></div>
-    <div class="part two"></div>
-    <div class="envelope"></div>
-    <div class="letter">
-        <p>Hello</p>
+    <h2 class="got-mail">You've got mail!</h2>
+    <div class="letter-wrapper" role="button" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="letter-heading"
+        tabindex="0">
+        <div class="part one" aria-hidden="true"></div>
+        <div class="part two" aria-hidden="true"></div>
+        <div class="envelope" aria-hidden="true"></div>
+        <div class="letter" role="document">
+            <p class="letter-preview">Hello</p>
+            <div class="letter-message" aria-hidden="true">
+                <h3 id="letter-heading">Welcome in!</h3>
+                <p>Thanks for stopping by my corner of the internet. I’m Brie &mdash; a designer, tinkerer, and storyteller
+                    who loves crafting thoughtful experiences.</p>
+                <p>Tap the button below when you’re ready to explore my work. I hope you enjoy reading as much as I enjoyed
+                    creating it for you!</p>
+                <button type="button" class="btn letter-close">Enter Portfolio</button>
+            </div>
+        </div>
     </div>
- </div>
 </div>
 </div>
 
