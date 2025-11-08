@@ -18,16 +18,15 @@
 <div id="letter-content">
 <div class="letter-container">
     <h2 class="got-mail">You've got mail!</h2>
-    <div class="letter-wrapper" role="button" aria-haspopup="dialog" aria-expanded="false" aria-labelledby="letter-heading"
-        tabindex="0">
-        <div class="part one" aria-hidden="true"></div>
-        <div class="part two" aria-hidden="true"></div>
-        <div class="envelope" aria-hidden="true"></div>
+    <div class="letter-wrapper" role="button" tabindex="0">
+        <div class="part one"></div>
+        <div class="part two"></div>
+        <div class="envelope"></div>
         <div class="letter" role="document">
             <p class="letter-preview">Click me!!!</p>
-            <div class="letter-message" aria-hidden="true">
+            <div class="letter-message">
                 <h3 id="letter-heading">Welcome in!</h3>
-                <p>Hey, I’m so glad you stopped by! Welcome to my portfolio. Feel free to take a look around and get to know me a little better!</p>
+                <p>Hey, I’m so glad you stopped by!  Welcome to my portfolio.  Feel free to take a look around and get to know me a little better!</p>
                 <button type="button" class="btn letter-close">Enter Portfolio</button>
             </div>
         </div>
@@ -36,70 +35,83 @@
 </div>
 
 
-<div class="site-content">
+<div class="site-content" id="site-content">
 
 
-    <!-- Heading -->
-     <header class="hero">
-        <div class="container hero-content">
-            <img src="images/pfp.jpg" alt="Brie" class="hero-img">
-            <div class="hero-text">
-                <p class="intro">Hi, my name is</p>
-                <h1 class="name-text">
-                    <span class="name name-shadow">Brie Brocato</span>
-                    <span class="name name-front">Brie Brocato</span>
-                </h1>
-            </div>
-        </div>
-     </header>  
-     
-    <!-- Projects -->
-    <section class="projects">
-        <div class="container-project-card">
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="images/badge.png" alt="OCI AI Foundations Associate badge" style="max-width:140px; margin: 0 auto 10px; display:block;">
-                    <h3>OCI AI Foundations Associate</h3>
-                    <p>Oracle Cloud Infrastructure certification validating core GenAI/ML concepts, vector search & embeddings, model
-                    lifecycle, and prompt engineering with OCI services</p>
-                    <!-- <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=7256438B3244DE2AA359634A6530EC69E21506E647F42880E325AE80AA75CF54" target="_blank" class="btn">View Credential</a> -->
-                </div>
-
-                <div class="project-card">
-                    <img src="images/bouldering.png" alt="Bouldering buffs">
-                    <h3>Bouldering Buffs</h3>
-                    <p>Group project to develop a dynamic climbing community website that integrates real-time climbing route data from a public API</p>
-                    <a href="https://bouldering-buffs.onrender.com/home" target="_blank" class="btn">View Website</a>
-                </div>
-                <div class="project-card">
-                    <img src="images/audit.png" alt="Degree Audit Redo">
-                    <h3>Interface Redesign</h3>
-                    <p>Redesigned the University of Colorado’s Degree Audit interface to improve navigation and clarity for students</p>
-                    <a href="https://www.figma.com/slides/3E9QDrHwz7BRrGvTV5P52e/Project-3-Slides?node-id=1-69&t=Xdhqz5PAqfQpgvRn-0" target="_blank" class="btn">View on Figma</a>
-                </div>
-             
-            </div>
-        </div>
+<div class="wrap">
+    <main class="bento" id="content">
+    <section class="tile c-4 r-4">
+        <h3 id="about-h">My Intro to Coding</h3>
+        <p>I never planned on becoming a programmer.  My teacher in high school just noticed I had a knack for it and encouraged me to take more
+        classes. Somewhere between solving little puzzles and watching my ideas come alive on screen, I fell in love with the
+        process. What I enjoy most now is the freedom to make anything I can imagine, and that moment when all the pieces
+        finally fit together.  The end result is truly rewarding, and it’s like the story I’ve been writing in code suddenly breathes.</p>
     </section>
 
-     <!-- Contact -->
-     <div class="contact">
-        <div class="container-sm">
-            <p>If you’d like to get in touch, feel free to reach out!</p>
-            <ul>
-            <li>
-                <i class="fa-solid fa-envelope"></i> brie@lightspeedag.com
-            </li>
-            <li>
-                <i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/briebrocato" target="_blank">LinkedIn</a>
-            </li>
-            <li>
-                <i class="fa-brands fa-github"></i> <a href="https://github.com/briebrocato1" target="_blank">GitHub</a>
-            </li>
-            </ul>
-        </div>
-     </div>
 
+        <section class="tile c-8 r-4 hero-card">
+        <div class="hero-img" style="border-radius: 50%;">
+            <img src="images/pfp.jpg" alt="Brie Brocato">
+        </div>
+
+        <div class="hero-text">
+            <h1 id="hero-h">Hi, I’m Brie!</h1>
+            <p>I'm a Computer Science student at the University of Colorado Boulder with a passion for game development and interactive
+            design. I love creating experiences that feel alive by blending creativity with code to bring ideas to life on screen. My favorite projects turn logic into storytelling, where every detail helps build a world or emotion. Outside of tech, I
+            recharge by sketching ideas in my notebook, skiing in the mountains, and spending as much time
+            outdoors as possible! Whether I’m coding or engaging in my other hobbies, I love challenges that push me to grow and see things from a new perspective.</p>
+            <div style="margin-top:auto;display:flex;gap:10px;flex-wrap:wrap">
+            </div>
+        </div>
+
+        </section>
+
+
+        <section class="tile c-4 r-2">
+            <h3 id="skills-h">Skills &amp; Tools</h3>
+            <div class="chips" style="margin-top:8px">
+                <span class="chip">C++</span>
+                <span class="chip">HTML & CSS</span>
+                <span class="chip">UI/UX Design</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Communication</span>
+                <span class="chip">Figma</span>
+                <span class="chip">Time Management</span>
+                <span class="chip">Problem Solving</span>
+                <span class="chip">LaTeX</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Teamwork</span>
+                <span class="chip">Leadership</span>
+            </div>
+        </section>
+
+
+        <section class="tile c-4 r-2" >
+            <h3 id="now-h">Projects and Certifications</h3>
+            <p>See what I'm working on!</p>
+            <a class="btn" href="/projects.html"><i class="fa-solid fa-flask"></i> My Projects</a>
+        </section>
+
+
+        <section class="tile c-4 r-2" id="contact">
+            <h3 id="contact-h">Contact</h3>
+            <div class="chips" style="margin:6px 0 10px">
+                <a class="chip" href="mailto:brie@lightspeedag.com"><i class="fa-regular fa-envelope"></i> Email</a>
+                <a class="chip" href="https://www.linkedin.com/in/briebrocato/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a class="chip" href="https://github.com/briebrocato1"><i class="fa-brands fa-github"></i> GitHub</a>
+                
+            </div>
+            <div style="margin-top:18px;">
+                <a class="btn btn--large" href="images/resume.pdf" download><i class="fa-regular fa-file-lines"></i> My Resume!</a>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        Built with ♥ by Brie 
+    </footer>
+</div>
 </div>
 
  <script src="js/main.js"></script>   
